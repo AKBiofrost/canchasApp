@@ -24,7 +24,7 @@ class _MenuState extends State<Menu> {
         height: 25,
       ),
       Text(
-        'Home',
+        'List',
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 32,
@@ -69,7 +69,7 @@ class _MenuState extends State<Menu> {
 
       bottomNavigationBar: CurvedNavigationBar(
           backgroundColor: Colors.white,
-          color: Colors.red,
+          color: Colors.lightBlue,
           animationDuration: Duration(milliseconds: 1000),
           items: <Widget>[
             Icon(Icons.home, size: 30,color: Colors.white),

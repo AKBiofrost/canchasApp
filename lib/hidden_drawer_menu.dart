@@ -3,6 +3,7 @@ import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 import 'package:appcanchas/vistas/recursos/page/Menu.dart';
 import 'package:appcanchas/vistas/recursos/page/first.dart';
 import 'package:appcanchas/vistas/recursos/page/home.dart';
+import 'package:appcanchas/vistas/vista/list.dart';
 //import 'package:menuweb/src/page/login.dart';
 
 void main() => runApp(MyApp());
@@ -12,9 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.indigo
       ),
-      home: Home(),
+      home: list(),
     );
   }
 }
@@ -38,20 +39,20 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
     _page = [
       ScreenHiddenDrawer(
         ItemHiddenMenu(
-          name:'MenuWeb ',
+          name:'Home ',
           baseStyle: TextStyle( fontWeight: FontWeight.bold,
               color: Colors.white
           ),
             selectedStyle: TextStyle(),
           colorLineSelected: Colors.white
         ),
-       Home(),
+        list(),
 
       ),
 
       ScreenHiddenDrawer(
         ItemHiddenMenu(
-          name:'Menu ',
+          name:'vistas ',
           baseStyle: TextStyle( fontWeight: FontWeight.bold,
               color: Colors.white
           ),
@@ -62,7 +63,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(
-          name:'clientes',
+          name:'documentacion',
           baseStyle: TextStyle( fontWeight: FontWeight.bold,
           color: Colors.white
           ),
@@ -81,7 +82,7 @@ class _HiddenDrawerState extends State<HiddenDrawer> {
 
     return HiddenDrawerMenu(
         screens: _page,
-        backgroundColorMenu: Colors.deepOrange ,
+        backgroundColorMenu: Colors.blue ,
         initPositionSelected: 0,
       slidePercent: 35,
       contentCornerRadius: 40,
